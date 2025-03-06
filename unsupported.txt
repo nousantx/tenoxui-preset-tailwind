@@ -1,0 +1,7 @@
+- space-*
+- font-<family-value> => family-<family-value>
+- `text-<size>` - The `text-` shorthand for `fontSize` is replaced with `fs-`. You can still use class name like `text-xl`, `text-base`, and so on, but you can't customize the `fontSize` using it. Use `fs-` instead for customization.
+- decoration-<number> => decoration-thickness-<number> - Set thickness of text decoration
+- background-image / gradient
+- bg-(position) (background-position) => `bg-position-<value>`
+- bg-(size) (background-size) => `bg-size-<value>`

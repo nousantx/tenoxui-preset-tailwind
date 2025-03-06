@@ -1,3 +1,3 @@
-# Tailwind CSS Classes
+# Tailwind Minimal Preset TenoxUI
 
-Just make a tailwind css classes :D
+Use **real** TailwindCSS instead.

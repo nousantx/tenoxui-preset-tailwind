@@ -1,4 +1,0 @@
-".ease-linear":"tr-timing-linear",
-".ease-in":"tr-timing-[tx__ease-in]",
-".ease-out":"tr-timing-[tx__ease-out]",
-".ease-in-out":"tr-timing-[tx__ease-in-out]",

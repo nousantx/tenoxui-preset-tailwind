@@ -1,0 +1,55 @@
+{
+  "name": "tenoxui-preset-tailwind-mini",
+  "version": "0.1.0",
+  "description": "Minimal TailwindCSS class names for your TenoxUI",
+  "author": "NOuSantx <nousantx@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/nousantx/tenoxui-preset-tailwind#readme",
+  "keywords": [
+    "css",
+    "tailwindcss",
+    "frontend",
+    "css-framework"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nousantx/tenoxui-preset-tailwind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nousantx/tenoxui-preset-tailwind/issues"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.es.js",
+  "browser": "dist/index.iife.js",
+  "exports": {
+    ".": {
+      "types": "dist/index.d.ts",
+      "require": "dist/index.cjs",
+      "import": "dist/index.es.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc --noEmit && vite build && tsc --emitDeclarationOnly --declaration --outDir dist"
+  },
+  "packageManager": "pnpm@10.4.0",
+  "devDependencies": {
+    "@anyframe/core": "^0.3.0",
+    "@nousantx/color-generator": "^1.6.0",
+    "@nousantx/someutils": "^0.7.0",
+    "@tenoxui/static": "^0.4.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "@tenoxui/types": "^0.1.2"
+  }
+}

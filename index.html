@@ -1,26 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUI Lab</title>
-    <script src="https://cdn.jsdelivr.net/npm/tenoxui"></script>
-  </head>
-  <body>
-    <div class="box-100px -bg-red"></div>
-    <div class="d-flex space-x-12">
-      <div class="box-20px bg-red"></div>
-      <div class="box-20px bg-red"></div>
-      <div class="box-20px bg-red"></div>
-    </div>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tenoxui/static@0.4.1/dist/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@anyframe/core@0.3.0/dist/index.iife.js"></script>
+    <script src="./dist/index.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@4.0.9/preflight.css" />
     <script>
-      defineProps({ d: "display" });
-      tenoxui();
-      makeStyles({
-        ".-bg-red": "bg-yellow",
-        ".space-x-12 > * + *": "ml-3rem",
-        ".space-y-12 > * + *": "mt-1rem",
-      });
+      const { AnyFrame } = __anyframe_core__
+    </script>
+  </head>
+  <body class="bg-red-500">
+    <h1 class="bg-(color:blue)">Hwllo World!</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur obcaecati fuga, saepe
+      aperiam tempore? Ea!
+    </p>
+
+    <div class="size-48" style="background: orange; outline-width: 10px; outline-style: solid"></div>
+
+    <div class="bg-blue-500 p-1rem">
+      <div class="size-40 my-color-[rgb(255,0,255)] bg-$my-color-var"></div>
+    </div>
+
+    <script>
+      const ui = new AnyFrame(tailwindcss.default)
+      console.log(ui.create(['bg-red-500', 'min-h-screen']))
+
+      const classNames = [...document.querySelectorAll('*[class]')].flatMap(a => {
+        var r
+        return (r = a.getAttribute('class')) == null ? void 0 : r.split(/\s+/).filter(Boolean)
+      })
+
+      const styleTag = document.createElement('style')
+      const stylesheet = ui.create(classNames)
+
+      styleTag.textContent = stylesheet
+      document.head.appendChild(styleTag)
     </script>
   </body>
 </html>
